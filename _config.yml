@@ -39,7 +39,10 @@ baidu_tongji_id:
 google_analytics_id: UA-136661970-1 # google 分析追踪id
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 
 kramdown:
   input: GFM
