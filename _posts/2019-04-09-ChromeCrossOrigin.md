@@ -13,7 +13,8 @@ mathjax: true
 
 
 
-# Chrome浏览器跨域
+
+# Cross-Origin
 
 ## 参数说明
 | 序号 | 参数 | 说明 |
