@@ -66,7 +66,7 @@ mathjax: true
 
 ```
 // 打开控制台 命令创建文件夹
-mkdir -p $HOME/Data/Chrome/CORS
+mkdir -p $HOME/Data/Chrome/CORS/
 ```
 
 ![ForMac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForMac-1.png)
@@ -74,7 +74,7 @@ mkdir -p $HOME/Data/Chrome/CORS
 ### 2.命令打开Chrome浏览器
 
 ```
-open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=$HOME/Data/Chrome/CORS
+open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=$HOME/Data/Chrome/CORS/
 ```
 
 ![ForMac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForMac-2.png)
@@ -96,7 +96,7 @@ open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-d
 
 ```
 // 打开控制台 命令创建文件夹
-mkdir %USERPROFILE%\Data\Chrome\CORS
+mkdir %USERPROFILE%\Data\Chrome\CORS\
 ```
 
 ![ForWindows-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForWindows-1.png)
@@ -104,7 +104,7 @@ mkdir %USERPROFILE%\Data\Chrome\CORS
 ### 2.命令打开Chrome浏览器
 
 ```
-"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=%USERPROFILE%\Data\Chrome\CORS
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=%USERPROFILE%\Data\Chrome\CORS\
 ```
 
 ![ForWindows-2](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForWindows-2.png)
