@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Chrome浏览器跨域"
-date:   2019-04-09 01:21:26 +0800
+title: "Chrome浏览器跨域"
+date: 2019-04-09 01:21:26 +0800
 categories: Chrome
 tags: cross-origin
 author: ougato

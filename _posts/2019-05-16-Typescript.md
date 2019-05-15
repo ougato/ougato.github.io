@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Typescript"
-date:   2019-05-16 01:09:24 +0800
+title: "Typescript"
+date: 2019-05-16 01:09:24 +0800
 categories: Learn
 tags: Typescript
 author: ougato
