@@ -283,20 +283,14 @@ mathjax: true
 
 ---
 
-> `√` : 支持  
-`√c` : 只在字符组内部支持  
-`√s` : 不支持 *但是字符串文字支持*  
-`√sr` : 支持 *字符串文字也支持*  
-`√x` : 支持 *但是在字符串文字中，同样的序列有不同含义*  
-`√xx` : 不支持 *但是在字符串文字中，同样的序列有不同的含义*  
+> * **(1).语言提供的`元字符`支持简写法**  
 
-
-|`支持语言表`|单词分界符|退格字符|警报字符|Eacape字符|换页符|换行符|回车符|水平制表符|垂直制表符|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|`语言表`|单词分界符|退格字符|警报字符|Eacape字符|换页符|换行符|回车符|水平制表符|垂直制表符|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 ||`\b`|`\b`|`\a`|`\e`|`\f`|`\n`|`\r`|`\t`|`\v`|
-||-|-|-|-|-|-|-|-|-|
+|\-|\-|\-|\-|\-|\-|\-|\-|\-|\-|
 |**Python**|√|√c|√||√|√|√|√|√|
-|**Tel**|等于\y|√|√|√|√|√|√|√|√|
+|**Tcl**|等于\y|√|√|√|√|√|√|√|√|
 |**Perl**|√|√c|√|√|√|√|√|√||
 |**Java**|√x|√xx|√|√|√sr|√sr|√sr|√sr|√|
 |**GNU awk**||√|√||√|√|√|√|√|
@@ -308,3 +302,43 @@ mathjax: true
 |**flex**||√|√||√|√|√|√|√|
 |**Ruby**|√|√c|√|√|√|√|√|√|√|
 
+> `√` : 支持  
+`√c` : 只在字符组内部支持  
+`√s` : 不支持 *但是字符串文字支持*  
+`√sr` : 支持 *字符串文字也支持*  
+`√x` : 支持 *但是在字符串文字中，同样的序列有不同含义*  
+`√xx` : 不支持 *但是在字符串文字中，同样的序列有不同的含义*  
+
+---
+
+> * **(2).语言提供的 `反向引用` 支持和 `八进制` 及 `十六进制` 转义**
+
+|`语言表`|反向引用|八进制转义|十六进制转义|
+|:--:|:--:|:--:|:--:|
+|\-|\-|\-|\-|
+|**Python**|√|`\0;\07;\377`|`\xFF`|
+|**Tcl**|√|`\0;\77;\777`|`\x;\uFFFF;\UFFFFFFFF`|
+|**Perl**|√|`\0;\77;\777`|`\xF;\xFF;\x{…}`|
+|**Java**|√|`\07;\077;\0377`|`\xFF;\uFFFF`|
+|**GNU awk**||`\7;\77;\377`|`\x…`|
+|**GNU sed**|√|||
+|**GNU Emacs**|√|||
+|**.NET**|√|`\0;\77;\377`|`\xFF;\uFFFF`|
+|**PHP**|√|`\0;\77;\377`|`\xF;\xFF;\x{…}`|
+|**GNU grep/egrep**|√|||
+|**flex**||`\7;\77;\377`|`\xF;\xFF`|
+|**Ruby**|√|`\7;\77;\377`|`\xF;\xFF`|
+
+> \0  !\0" matches a NUL byte, but other one-digit octal escapes are not supported  
+\7, \77  one- and two- digit octal escapes are supported  
+\07  two-digit octal escapes are supported if leading digit is a zero  
+\077  thr ee-digit octal escapes are supported if leading digit is a zero  
+\377  thr ee-digit octal escapes are supported, until \377  
+\0377  four-digit octal escapes are supported, until \0377  
+\777  thr ee-digit octal escapes are supported, until \777  
+\x  \x allows any number of digits  
+\x{}  \x{} allows any number of digits  
+\xF, \xFF  one- and two- digit hex escape is allowed with \x  
+\uFFFF  four-digit hex escape allowed with \u  
+\UFFFF  four-digit hex escape allowed with \U  
+\UFFFFFFFF  eight-digit hex escape allowed  with \U (See page 91 for version information.)  
