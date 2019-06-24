@@ -283,6 +283,36 @@ mathjax: true
 
 ---
 
+`\d` : **数字字符**
+> * 和`[0-9]`等价，如果语言支持`Unicode`，能匹配到所有的`Unicode`数字。
+
+---
+
+`\D` : **非数字字符**
+> * 和`[^0-9]`等价，只要不是数字的字符都匹配。
+
+---
+
+`\w` : **单词字符**
+> * 和`[0-9a-zA-Z_]`等价，`大小写字母`和`数字`及`下划线`字符。
+
+---
+
+`\W` : **非单词字符**
+> * 和`[^0-9a-zA-Z_]`等价，非`大小写字母`和`数字`及`下划线`字符。
+
+---
+
+`\s` : **空白字符**
+> * 在支持ASCII的系统中，通常等价于`[ \f\n\r\t\v]`，在支持Unicode的系统中，有时包含Unicode的 \"换行\" 控制字符`u+0085`，有时包含 \"空白\" 属性。
+
+---
+
+`\S` : **非空白字符**
+> * 等价于`[^\s]`。
+
+---
+
 > * **(1).语言提供的`元字符`支持简写法**  
 
 |`语言表`|单词分界符|退格字符|警报字符|Eacape字符|换页符|换行符|回车符|水平制表符|垂直制表符|
@@ -329,16 +359,45 @@ mathjax: true
 |**flex**||`\7;\77;\377`|`\xF;\xFF`|
 |**Ruby**|√|`\7;\77;\377`|`\xF;\xFF`|
 
-> \0  !\0" matches a NUL byte, but other one-digit octal escapes are not supported  
-\7, \77  one- and two- digit octal escapes are supported  
-\07  two-digit octal escapes are supported if leading digit is a zero  
-\077  thr ee-digit octal escapes are supported if leading digit is a zero  
-\377  thr ee-digit octal escapes are supported, until \377  
-\0377  four-digit octal escapes are supported, until \0377  
-\777  thr ee-digit octal escapes are supported, until \777  
-\x  \x allows any number of digits  
-\x{}  \x{} allows any number of digits  
-\xF, \xFF  one- and two- digit hex escape is allowed with \x  
-\uFFFF  four-digit hex escape allowed with \u  
-\UFFFF  four-digit hex escape allowed with \U  
-\UFFFFFFFF  eight-digit hex escape allowed  with \U (See page 91 for version information.)  
+> `\0` : 匹配字节Nul，而其他一位数字的八进制转义是不支持的  
+`\7` : 支持一位八进制转义  
+`\77` : 支持两位位八进制转义  
+`\07` : 支持开头为0的两位八进制转义  
+`\077` : 支持开头为0的三位八进制转义  
+`\377` : 支持不超过\377的三位八进制转义  
+`\0377` : 支持不超过\0377的四位八进制转义  
+`\777` : 支持不超过\777的三位八进制转义  
+`\x…` : 容许出现任意多为数字  
+`\x{…}` : 容许出现任意多为数字  
+`\xF` : 以\x开头，容许出现一位十六进制转义  
+`\xFF` : 以\x开头，容许出现两位十六进制转义  
+`\uFFFF` : 以\u开头的3位十六进制转义  
+`\UFFFFFFFF` : 以\u开头的8位十六进制转义  
+
+## **3.正则引擎 `<Regex Engine>`**
+
+> * 分类  
+
+|引擎类型|语言|
+|:--:|:--:|
+|\-|\-|
+|**DFA**|**awk, egrep, ex, lex, MySQL, Procmail**|
+|**Traditional NFA**|**GNU Emacs, Java, grep, less, more, .NET languages, PCRE library, Perl, PHP, Python, Ruby, sed (most versions), vi**|
+|**POSIX NFA**|**mawk, Mortice Kern Systems' utilities, GNU Emacs**|
+|**Hybrid NFA/DFA**|**GNU awk, GNU grep /egrep, Tcl**|
+
+---
+
+> * 检测
+
+```
+string: "nfa not"
+// 检测是否NFA引擎类型
+nfa|nfa not
+```
+
+如果只匹配到`nfa`，就是传统型NFA （`Traditional NFA`）。  
+如果匹配到`nfa not`，要么是`POSIX NFA`，或者是`DFA`。
+
+---
+
