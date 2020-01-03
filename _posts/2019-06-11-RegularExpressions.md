@@ -384,7 +384,7 @@ mathjax: true
 |**DFA**|**awk, egrep, ex, lex, MySQL, Procmail**|
 |**Traditional NFA**|**GNU Emacs, Java, grep, less, more, .NET languages, PCRE library, Perl, PHP, Python, Ruby, sed (most versions), vi**|
 |**POSIX NFA**|**mawk, Mortice Kern Systems' utilities, GNU Emacs**|
-|**Hybrid NFA/DFA**|**GNU awk, GNU grep /egrep, Tcl**|
+|**Hybrid NFA/DFA**|**GNU awk, GNU grep/egrep, Tcl**|
 
 ---
 
