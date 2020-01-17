@@ -69,7 +69,7 @@ mathjax: true
 mkdir -p $HOME/Data/Chrome/CORS/
 ```
 
-![ForMac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForMac-1.png)
+![for-mac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-1.png)
 
 ### 2.命令打开Chrome浏览器
 
@@ -77,15 +77,15 @@ mkdir -p $HOME/Data/Chrome/CORS/
 open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=$HOME/Data/Chrome/CORS/
 ```
 
-![ForMac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForMac-2.png)
+![for-mac-2](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-2.png)
 
 ### 3.选择是否 默认浏览器 / 反馈
 
-![ForMac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForMac-3.png)
+![for-mac-3](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-3.png)
 
 ### 4.完成跨域
 
-![ForMac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForMac-4.png)
+![for-mac-4](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-4.png)
 
 ---
 
@@ -99,7 +99,7 @@ open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-d
 mkdir %USERPROFILE%\Data\Chrome\CORS\
 ```
 
-![ForWindows-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForWindows-1.png)
+![for-windows-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-windows-1.png)
 
 ### 2.命令打开Chrome浏览器
 
@@ -107,8 +107,8 @@ mkdir %USERPROFILE%\Data\Chrome\CORS\
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=%USERPROFILE%\Data\Chrome\CORS\
 ```
 
-![ForWindows-2](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForWindows-2.png)
+![for-windows-2](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-windows-2.png)
 
 ### 3.完成跨域
 
-![ForWindows-3](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/ForWindows-3.png)
+![for-windows-3](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-windows-3.png)
