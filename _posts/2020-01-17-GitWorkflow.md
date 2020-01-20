@@ -3,7 +3,7 @@ layout: post
 title: "Git简单使用流程"
 date: 2019-11-21 02:29:34 +0800
 categories: Learn
-tags: Semver
+tags: Git
 author: ougato
 mathjax: true
 ---
