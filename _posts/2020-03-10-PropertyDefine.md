@@ -129,7 +129,7 @@ public hello: number = 0;
 如上代码，最小是 0，最大是 500，每次单步拖动为 50，所以鼠标往右移动 10次就走到头了，不能再往右拖动增加数值了。
 
 ## **`range`**
-> * 包含了 **min|max|step**，可以直接在 **range** 中快速设置这三个值。
+> * 包含了 **min\|max\|step**，可以直接在 **range** 中快速设置这三个值。
 > * 类型：**`number[]`**
 
 ```typescript
@@ -141,7 +141,7 @@ public hello: number = 0;
 
 ![图-09](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2020-03-10-PropertyDefine/property-define-09.gif)
 
-如果需要三个属性 **min|max|step** 同时存在的时候，允许在 number 数组中，传入三个数值，下标 1 代表 min，下标 2 代表 max，下标 3 代表 step，快速设置。
+如果需要三个属性 **min\|max\|step** 同时存在的时候，允许在 number 数组中，传入三个数值，下标 1 代表 min，下标 2 代表 max，下标 3 代表 step，快速设置。
 
 ## **`slide`**
 > * 编辑器面板显示横向滑动条，鼠标拖动来改变数值大小
