@@ -21,7 +21,7 @@ mathjax: true
 ### 基本用法
 
 ```typescript
-let s: Set = new Set()
+let s: Set = new Set();
 ```
 
 ### 特性描述
@@ -51,7 +51,7 @@ let s: Set = new Set()
 ### 基本用法
 
 ```typescript
-let ws: WeakSet = new WeakSet()
+let ws: WeakSet = new WeakSet();
 ```
 
 ### 特性描述
@@ -72,15 +72,84 @@ let ws: WeakSet = new WeakSet()
 
 ## **Map**
 
+预留空白处，待补充
+
+---
+
+## **Proxy**
+
 ### 基本用法
 
 ```typescript
-let map: Map = new Map()
+// param 1: 需要代理的目标对象。
+// param 2: 配置对象，每一个被代理的方法，都需要提供一个对应的处理函数，该函数将拦截对应的方法。
+let proxy: Proxy = new Proxy({}, {
+    construct: function(target, args, newTarget) {},
+    get: function() {},
+    set: function() {},
+    apply: function() {},
+});
 ```
 
 ### 特性描述
 
-1. 本质上是键值对的集合，各种类型的值（包括对象）都可以当作键。
+1. 在目标对象之前架设一层 “拦截” ，外界对该对象的访问，都必须先通过这层拦截。
+
+### 常用方法
+
+* `get()`
+  * 用于拦截某个属性的`读取`操作；可以接受三个参数，依次为目标对象、属性名、Proxy 实例本身（严格地说，是操作行为所针对的对象），其中最后一个参数可选。
+* `set()`
+  * 用来拦截某个属性的`赋值`操作；可以接受四个参数，依次为目标对象、属性名、属性值、 Proxy 实例本身，其中最后一个参数可选。
+* `apply()`
+  * 拦截函数的调用，`call` 和 `apply` 操作；可以接受三个参数，分别是目标对象、目标对象的上下文对象（this）、目标对象的参数数组。
+* `has()`
+  * 用来拦截 `HasProperty` 操作，即判断对象是否具有某个属性时，这个方法会生效，典型的操作就是 `in` 运算符；可以接受两个参数，分别是目标对象、需查询的属性名。
+* `construct()`
+  * 用于拦截 `new` 命令。
+* `deleteProperty()`
+  * 用于拦截 `delete` 操作，如果这个方法抛出错误或者返回 false，当前属性就无法被 delete 命令删除。
+* `defineProperty()`
+  * 用于拦截 `Object.defineProperty()` 操作。
+* `getOwnPropertyDescriptor()`
+  * 用于拦截 `Object.getOwnPropertyDescriptor()` ，返回一个属性描述对象或者undefined。
+* `getPrototypeOf()`
+  * 用于拦截`获取对象原型`。具体来说，拦截下面这些操作。
+    - Object.prototype.\_\_proto\_\_
+    - Object.prototype.isPrototypeOf()
+    - Object.getPrototypeOf()
+    - Reflect.getPrototypeOf()
+    - instanceof
+* `isExtensible()`
+  * 用于拦截 `Object.isExtensible()` 操作。
+* `ownKeys()`
+  * 用于拦截`对象自身属性的读取操作`。具体来说，拦截以下操作。
+    - Object.getOwnPropertyNames()
+    - Object.getOwnPropertySymbols()
+    - Object.keys()
+    - for ... in
+* `preventExtensions()`
+  * 方法拦截 `Object.preventExtensions()`。该方法必须返回一个布尔值，否则会被自动转为布尔值。
+  * 这个方法有一个限制，只有目标对象不可扩展时（即 `Object.isExtensible(proxy)` 为 false），proxy.preventExtensions 才能返回 true，否则会报错。
+* `setPrototypeOf()`
+  * 方法拦截 `Object.setPrototypeOf()` 方法。
+* `Proxy.revocable()`
+  * 方法返回一个可取消的 Proxy 实例。
+  * 方法返回一个对象，该对象的 proxy 属性是 Proxy 实例，revoke属性是一个函数，可以取消 Proxy 实例。上面代码中，当执行 revoke 函数之后，再访问 Proxy 实例，就会抛出一个错误。
+  * 目标对象不允许直接访问，必须通过代理访问，一旦访问结束，就收回代理权，不允许再次访问。
+* `this 问题`
+  * 虽然 Proxy 可以代理针对目标对象的访问，但它不是目标对象的透明代理，即不做任何拦截的情况下，也无法保证与目标对象的行为一致。主要原因就是在 Proxy 代理的情况下，目标对象内部的this关键字会指向 Proxy 代理。
+
+---
+
+### **Reflect**
+
+
+### 特性描述
+
+1. 将Object对象的一些明显属于语言内部的方法（比如Object.defineProperty），放到Reflect对象上。现阶段，某些方法同时在Object和Reflect对象上部署，未来的新方法将只部署在Reflect对象上。也就是说，从Reflect对象上可以拿到语言内部的方法。
+
+
 
 
 ## [基础类型](https://www.tslang.cn/docs/handbook/basic-types.html)
