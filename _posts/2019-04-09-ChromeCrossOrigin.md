@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Chrome浏览器跨域"
+title: "Chrome 浏览器跨域"
 date: 2019-04-09 01:21:26 +0800
 categories: Chrome
 tags: CrossOrigin
@@ -14,7 +14,7 @@ mathjax: true
 
 
 
-# Cross-Origin
+# Chrome 浏览器跨域
 
 ## 参数说明
 
@@ -69,7 +69,7 @@ mathjax: true
 mkdir -p $HOME/Data/Chrome/CORS/
 ```
 
-![for-mac-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-1.png)
+![for-mac-1](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-mac-1.png)
 
 ### 2.命令打开Chrome浏览器
 
@@ -77,15 +77,15 @@ mkdir -p $HOME/Data/Chrome/CORS/
 open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=$HOME/Data/Chrome/CORS/
 ```
 
-![for-mac-2](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-2.png)
+![for-mac-2](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-mac-2.png)
 
 ### 3.选择是否 默认浏览器 / 反馈
 
-![for-mac-3](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-3.png)
+![for-mac-3](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-mac-3.png)
 
 ### 4.完成跨域
 
-![for-mac-4](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-mac-4.png)
+![for-mac-4](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-mac-4.png)
 
 ---
 
@@ -99,7 +99,7 @@ open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-d
 mkdir %USERPROFILE%\Data\Chrome\CORS\
 ```
 
-![for-windows-1](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-windows-1.png)
+![for-windows-1](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-windows-1.png)
 
 ### 2.命令打开Chrome浏览器
 
@@ -107,8 +107,8 @@ mkdir %USERPROFILE%\Data\Chrome\CORS\
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=%USERPROFILE%\Data\Chrome\CORS\
 ```
 
-![for-windows-2](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-windows-2.png)
+![for-windows-2](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-windows-2.png)
 
 ### 3.完成跨域
 
-![for-windows-3](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2019-04-09-ChromeCrossOrigin/for-windows-3.png)
+![for-windows-3](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/cross-origin/for-windows-3.png)

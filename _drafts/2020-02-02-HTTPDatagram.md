@@ -18,7 +18,7 @@ mathjax: true
 
 ## 请求报文
 
-![请求报文结构](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2020-02-02-HTTP/http-request-datagram.png)
+![请求报文结构](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/http/http-request-datagram.png)
 
 ### 请求行
 

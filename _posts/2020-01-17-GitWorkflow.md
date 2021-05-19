@@ -16,10 +16,6 @@ mathjax: true
 
 # Git简单使用流程
 
-|软件|系统|终端|版本|
-|:--:|:--:|:--:|:--:|
-|Git|macOS Mojava|iTerm|v2.22.0|
-
 ## 本地分支
 
 * `master` : **主分支** 保持与远程 *master* 分支同步，合并稳定的本地 *release* 分支，进行[版本控制](https://ougato.github.io/2019/11/20/Semver/) tag 封订，为了今后线上版本出现问题时，方便查找稳定的版本号，进行热修复。
@@ -39,4 +35,4 @@ mathjax: true
 
 ## Git 流程图
 
-![git-model](https://raw.githubusercontent.com/ougato/ougato.github.res/master/2020-01-17-Git/git-model.png)
+![git-model](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/git/git-model.png)
