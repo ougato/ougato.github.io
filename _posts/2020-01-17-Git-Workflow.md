@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Git简单使用流程"
+title: "Git 简单使用流程"
 date: 2020-01-17 12:24:05 +0800
-categories: Learn
-tags: Git
+categories: Git
+tags: 
 author: ougato
 mathjax: true
 ---
@@ -14,7 +14,7 @@ mathjax: true
 
 
 
-# Git简单使用流程
+# Git 简单使用流程
 
 ## 本地分支
 

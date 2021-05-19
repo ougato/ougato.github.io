@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Typescript 中 property 完整属性定义"
+title: "Cocos Creator 中 property 属性完整定义"
 date: 2020-03-10 15:42:51 +0800
 categories: Cocos Creator
-tags: Property
+tags: 
 author: ougato
 mathjax: true
 ---
@@ -14,7 +14,7 @@ mathjax: true
 
 
 
-# Typescript 中 property 完整属性定义
+# Cocos Creator 中 property 属性完整定义
 
 ## **`displayName`**
 > * 功能：表示重定义变量在编辑器面板的名字 
