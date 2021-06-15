@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "设计模式之开闭原则"
-date: 2020-04-24 03:17:59 +0800
+date: 2021-04-24 03:17:59 +0800
 categories: DesignMode
 tags: OpenClose
 author: ougato
