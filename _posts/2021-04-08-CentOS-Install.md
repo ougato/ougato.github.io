@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "安装 Cent OS 7 系统"
-date: 2021-05-19 21:00:43 +0800
+date: 2021-04-08 21:00:43 +0800
 categories: CentOS
 tags: Install
 author: ougato

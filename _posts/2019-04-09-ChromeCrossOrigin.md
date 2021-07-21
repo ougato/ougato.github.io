@@ -3,7 +3,7 @@ layout: post
 title: "Chrome 浏览器跨域"
 date: 2019-04-09 01:21:26 +0800
 categories: Chrome
-tags: CrossOrigin
+tags: CrossOrigin MacOS Windows
 author: ougato
 mathjax: true
 ---
