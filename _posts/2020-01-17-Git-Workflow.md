@@ -35,4 +35,4 @@ mathjax: true
 
 ## Git 流程图
 
-![git-model](https://raw.githubusercontent.com/ougato/ougato.github.io/master/_image/git/git-model.png)
+![git-model](../_image/git/git-model.png)
