@@ -60,9 +60,9 @@ mathjax: true
 | 38 | --touch-optimized-ui | 使用对触屏更友好的用户界面。（目前来看似乎只是把一些字体放大了） |
 | 39 | --user-agent | 使用给定的 User-Agent 字符串。 |
 
-## Mac
+## MacOS
 
-### 1.创建存储跨域数据文件夹
+### 1. 创建存储跨域数据文件夹
 
 ```
 // 打开控制台 命令创建文件夹
@@ -71,7 +71,7 @@ mkdir -p $HOME/Data/Chrome/CORS/
 
 ![for-mac-1](../_image/cross-origin/for-mac-1.png)
 
-### 2.命令打开Chrome浏览器
+### 2. 命令打开Chrome浏览器
 
 ```
 open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=$HOME/Data/Chrome/CORS/
@@ -79,11 +79,11 @@ open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-d
 
 ![for-mac-2](../_image/cross-origin/for-mac-2.png)
 
-### 3.选择是否 默认浏览器 / 反馈
+### 3. 选择是否 默认浏览器 / 反馈
 
 ![for-mac-3](../_image/cross-origin/for-mac-3.png)
 
-### 4.完成跨域
+### 4. 完成跨域
 
 ![for-mac-4](../_image/cross-origin/for-mac-4.png)
 
@@ -92,7 +92,7 @@ open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-d
 ## Windows
 
 
-### 1.创建存储跨域数据文件夹
+### 1. 创建存储跨域数据文件夹
 
 ```
 // 打开控制台 命令创建文件夹
@@ -101,7 +101,7 @@ mkdir %USERPROFILE%\Data\Chrome\CORS\
 
 ![for-windows-1](../_image/cross-origin/for-windows-1.png)
 
-### 2.命令打开Chrome浏览器
+### 2. 命令打开Chrome浏览器
 
 ```
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=%USERPROFILE%\Data\Chrome\CORS\
@@ -109,6 +109,6 @@ mkdir %USERPROFILE%\Data\Chrome\CORS\
 
 ![for-windows-2](../_image/cross-origin/for-windows-2.png)
 
-### 3.完成跨域
+### 3. 完成跨域
 
 ![for-windows-3](../_image/cross-origin/for-windows-3.png)
