@@ -22,10 +22,10 @@ mathjax: true
 
 * 管理器
 	* 界面管理器（UIManager）
-	* 声音管理器（AudioManager）
-		* 音乐播放器（MusicPlayer）
-		* 音效播放器（SoundPlayer）
-	* 事件管理器（EventManager）
+	* ~~声音管理器（AudioManager）~~
+		* ~~音乐播放器（MusicPlayer）~~
+		* ~~音效播放器（SoundPlayer）~~
+	* ~~事件管理器（EventManager）~~
 	* 网络管理器（NetworkManager）
 		* Http
 		* WebSocket
@@ -36,13 +36,13 @@ mathjax: true
 		* 缓动播放器（TweenPlayer）
 		* 龙骨播放器（DragonBonePlayer）
 	* 更新管理器（UpdateManager）
-	* 日志管理器（LogManager）
-	* 资源管理器（ResouceManager）
-		* 缓存器（Buffer）
-		* 加载器（Loader）
+	* ~~日志管理器（LogManager）~~
+	* ~~资源管理器（ResouceManager）~~
+		* ~~缓存器（Buffer）~~
+		* ~~加载器（Loader）~~
 
-* 本地存储
-	* 数据库
+* ~~本地存储~~
+	* ~~数据库~~
 	* 硬盘库
     
 * 多语言
