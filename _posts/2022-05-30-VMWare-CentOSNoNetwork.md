@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "CentOS 7 在 VMWare 虚拟机内没有 eth0 网卡"
+title: "VMWare 安装 CentOS 没有 eth0 网卡"
 date: 2022-05-30 17:01:38 +0800
-categories: CentOS
+categories: VMWare
 tags: VMWare CentOS
 author: ougato
 mathjax: true
@@ -14,7 +14,7 @@ mathjax: true
 
 
 
-# CentOS 7 在 VMWare 虚拟机内没有 eth0 网卡
+# VMWare 安装 CentOS 没有 eth0 网卡
 
 ## 只存在 ens33 和 lo 网卡 解决方案
 
@@ -35,8 +35,6 @@ mv /etc/sysconfig/network-scripts/ifcfg-ens33 /etc/sysconfig/network-scripts/ifc
 ```shell
 vi /etc/default/grub
 ```
-
-
 
 4. 更新配置
 
